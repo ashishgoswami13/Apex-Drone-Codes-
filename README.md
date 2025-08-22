@@ -8,11 +8,7 @@ This repository contains multiple focused Python scripts for controlling the dro
 
 For convenience, a packaged Python App.exe (tkinter GUI) is also created to reduce dependency setup for non-technical users (just run the executable).
 
-<p align="center">
-  <a>
-    <img src="https://drive.google.com/file/d/1VK5dpuFzuETRi-VwDfBAqIb4nBs6EMCb/view?usp=drive_link" alt="python_app.png" width="600"/>
-  </a>
-</p>
+https://github.com/ashishgoswami13/Apex-Drone-Codes-/blob/432008d43d089284270a32afe5d218fbf488f941/Drone%20Control%20App.png
 ---
 
 ## Files & What They Do
