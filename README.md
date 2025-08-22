@@ -96,6 +96,3 @@ ashishgoswami2121@gmail.com
 
 ---
 
-## 📮 Contact 
-ashishgoswami2121@gmail.com 
-
