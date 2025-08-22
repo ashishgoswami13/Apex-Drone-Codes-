@@ -1,4 +1,4 @@
-# 🚁 Apex G-149 Drone Control Suite (Wi‑Fi & BLE)
+# Apex G-149 Drone Control Suite (Wi‑Fi & BLE)
 
 Apex G-149 Scratch Drone is coded using Python from the Protocol Sheet that was provided by the company.
 
@@ -10,27 +10,27 @@ For convenience, a packaged Python App.exe (tkinter GUI) is also created to redu
 
 ---
 
-## 🗂️ Files & What They Do
+## Files & What They Do
 
 Wi‑Fi Control Scripts:
-- 🧭 drone_wifi_control.py — Core manual controller (gyro auto-calibration, safe land-on-exit, yaw + directional)
-- 🎯 drone_hula_loop.py — Automated “Hula Hoop” path (menu key: h)
-- 🔷 drone_rectangle.py — Rectangle flight (key: r)
-- 🔄 drone_circle_rect.py — Rectangle (r) + circle (o)
-- 🛠️ drone_ver_circle.py — User-defined sequence (key: v)
-- 🪜 drone_step.py — “Apex” staircase pattern (key: v)
+- drone_wifi_control.py — Core manual controller (gyro auto-calibration, safe land-on-exit, yaw + directional)
+- drone_hula_loop.py — Adds an automated “Hula Hoop” forward/ascend/descend path (menu key: h)
+- drone_rectangle.py — Automated rectangle flight (key: r) + manual controls
+- drone_circle_rect.py — Rectangle (r) and circular path (o) using combined pitch + yaw
+- drone_ver_circle.py — User-defined forward / ascend / backward / descend sequence (key: v)
+- drone_step.py — “Apex” staircase style progressive forward + altitude pattern (key: v)
 
 BLE Control:
-- 📡 drone_all_moves.py — BLE scanner + continuous command loop (altitude & battery)
+- drone_all_moves.py — BLE scanner + continuous command loop (notifications parsed for altitude & battery)
 
 Shared Concepts:
-- 🧱 create_wifi_command / create_packet — Build JSON control frames
-- 🔁 Continuous sender thread — Keeps last command alive
-- 📥 Data receiver — Parses altitude & battery
+- create_wifi_command / create_packet — Build JSON control frames for Wi‑Fi
+- Continuous sender thread — Keeps last command “alive” (avoid failsafe hover)
+- Data receiver — Parses NOTIFY packets for altitude (low/high bytes) & battery
 
 ---
 
-## ⚡ Quick Start (Wi‑Fi)
+## Quick Start (Wi‑Fi)
 
 1. Connect PC to drone’s Wi‑Fi (default 192.168.1.1).
 2. Run one script, e.g.:  
@@ -39,15 +39,15 @@ Shared Concepts:
 4. Type exit / q (depending on script) for safe shutdown.
 
 Typical Movement Keys (variant per script):
-- 🚀 Forward / Back: w / s
-- ⬆️ Ascend / Descend: u / j (or w / s)
-- ↔️ Strafe / Roll: a / d
-- 🧭 Yaw: q / e
-- 🛑 Stop (hover): x
+- Forward / Back: w / s (some scripts swap role with ascend/descend—see menu)
+- Ascend / Descend: u / j or w / s (shown in each script’s menu)
+- Strafe / Roll: a / d
+- Yaw: q / e
+- Stop (hover): x
 
 ---
 
-## 🌐 Quick Start (BLE)
+## Quick Start (BLE)
 
 1. pip install bleak
 2. python drone_all_moves.py
@@ -56,7 +56,7 @@ Typical Movement Keys (variant per script):
 
 ---
 
-## 🤖 Automated Sequences (Summary)
+## Automated Sequences (Summary)
 
 | Script | Sequence |
 |--------|----------|
@@ -70,26 +70,28 @@ All sequences burst send TAKEOFF / LAND and interleave timed motion + STOP stabi
 
 ---
 
-## 📊 Telemetry
+## Telemetry
 
 - Wi‑Fi: Altitude = signed mm from bytes D8 (low) + D9 (high), converted to cm; battery = D10
 - BLE: Altitude bytes [8:10], battery byte [10] (when notification length ≥ 16)
 
 ---
 
-## 🖥️ GUI App (App.exe)
+## GUI App (App.exe)
+
 A tkinter-based packaged executable (not shown here) wraps core controls:
-- 📦 No manual dependency installs
-- 🕹️ Buttons for takeoff / land / movement / sequences
-- 🎓 Great for classroom or demos
+- Eliminates need for manual dependency installs
+- Provides buttons for takeoff, land, movement, and sequence start
+- Ideal for classroom or demo environments
 
 ---
 
-## 🛡️ Disclaimer
+## Disclaimer
+
 Not affiliated with the drone manufacturer. Educational / experimental use only.
 
+## Contact
+
+ashishgoswami2121@gmail.com
+
 ---
-
-## 📮 Contact 
-ashishgoswami2121@gmail.com 
-
