@@ -66,9 +66,9 @@ All sequences burst send TAKEOFF / LAND and interleave timed motion + STOP stabi
 
 ## GUI App (App.exe)
 
-A tkinter-based packaged executable (not shown here) wraps core controls:
+A tkinter-based packaged executable wraps core controls:
 - Eliminates need for manual dependency installs
-- Provides buttons for takeoff, land, movement, and sequence start
+- Provides buttons for takeoff, land, movements, emergency stop and sequence start
 
 ---
 
@@ -81,4 +81,3 @@ Not affiliated with the drone manufacturer. Educational / experimental use only.
 ashishgoswami2121@gmail.com
 
 ---
-
