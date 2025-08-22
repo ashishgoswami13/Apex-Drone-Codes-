@@ -4,7 +4,6 @@ Apex G-149 Scratch Drone is coded using Python from the Protocol Sheet that was 
 
 This repository contains multiple focused Python scripts for controlling the drone over:
 - Wi‑Fi (TCP JSON-in-CTP framing; mirrors 14-byte control structure)
-- BLE (raw 13-byte packet protocol)
 
 For convenience, a packaged Python App.exe (tkinter GUI) is also created to reduce dependency setup for non-technical users (just run the executable).
 
