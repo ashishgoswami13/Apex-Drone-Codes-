@@ -1,4 +1,4 @@
-# Apex G-149 Drone Control Suite (Wi‑Fi & BLE)
+# Apex G-149 Drone Control Suite (Wi‑Fi)
 
 Apex G-149 Scratch Drone is coded using Python from the Protocol Sheet that was provided by the company.
 
