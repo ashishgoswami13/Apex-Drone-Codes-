@@ -46,13 +46,6 @@ Shared Concepts:
 3. Use menu keys (takeoff = 1, land = 2, movement keys vary slightly per script).
 4. Type exit / q (depending on script) for safe shutdown.
 
-Typical Movement Keys (variant per script):
-- Forward / Back: w / s (some scripts swap role with ascend/descend—see menu)
-- Ascend / Descend: u / j or w / s (shown in each script’s menu)
-- Strafe / Roll: a / d
-- Yaw: q / e
-- Stop (hover): x
-
 ---
 
 ## Quick Start (BLE)
@@ -90,7 +83,6 @@ All sequences burst send TAKEOFF / LAND and interleave timed motion + STOP stabi
 A tkinter-based packaged executable (not shown here) wraps core controls:
 - Eliminates need for manual dependency installs
 - Provides buttons for takeoff, land, movement, and sequence start
-- Ideal for classroom or demo environments
 
 ---
 
