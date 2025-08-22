@@ -5,7 +5,7 @@ Apex G-149 Scratch Drone is coded using Python from the Protocol Sheet that was 
 This repository contains multiple focused Python scripts for controlling the drone over:
 - Wi‑Fi (TCP JSON-in-CTP framing; mirrors 14-byte control structure)
 
-For convenience, a packaged Python App.exe (tkinter GUI) is also created to reduce dependency setup for non-technical users (just run the dist -> drone_controller_app.exe or drone_controller_app.py).
+For convenience, a packaged Python App.exe (tkinter GUI) is also created to reduce dependency setup for non-technical users (just run the drone_controller_app.exe or drone_controller_app.py).
 
 ![image alt](https://github.com/ashishgoswami13/Apex-Drone-Codes-/blob/432008d43d089284270a32afe5d218fbf488f941/Drone%20Control%20App.png)
 
