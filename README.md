@@ -8,6 +8,11 @@ This repository contains multiple focused Python scripts for controlling the dro
 
 For convenience, a packaged Python App.exe (tkinter GUI) is also created to reduce dependency setup for non-technical users (just run the executable).
 
+<p align="center">
+  <a>
+    <img src="https://drive.google.com/file/d/1VK5dpuFzuETRi-VwDfBAqIb4nBs6EMCb/view?usp=drive_link" alt="python_app.png" width="600"/>
+  </a>
+</p>
 ---
 
 ## Files & What They Do
