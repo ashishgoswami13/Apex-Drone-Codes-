@@ -28,9 +28,6 @@ Wi‑Fi Control Scripts:
 - drone_ver_circle.py — User-defined forward / ascend / backward / descend sequence (key: v)
 - drone_step.py — “Apex” staircase style progressive forward + altitude pattern (key: v)
 
-BLE Control:
-- drone_all_moves.py — BLE scanner + continuous command loop (notifications parsed for altitude & battery)
-
 Shared Concepts:
 - create_wifi_command / create_packet — Build JSON control frames for Wi‑Fi
 - Continuous sender thread — Keeps last command “alive” (avoid failsafe hover)
@@ -45,15 +42,6 @@ Shared Concepts:
    python drone_wifi_control.py  
 3. Use menu keys (takeoff = 1, land = 2, movement keys vary slightly per script).
 4. Type exit / q (depending on script) for safe shutdown.
-
----
-
-## Quick Start (BLE)
-
-1. pip install bleak
-2. python drone_all_moves.py
-3. Select device starting with APEX
-4. Hold movement keys; 1 = takeoff, 2 = land, x = hover, q = quit
 
 ---
 
@@ -74,7 +62,6 @@ All sequences burst send TAKEOFF / LAND and interleave timed motion + STOP stabi
 ## Telemetry
 
 - Wi‑Fi: Altitude = signed mm from bytes D8 (low) + D9 (high), converted to cm; battery = D10
-- BLE: Altitude bytes [8:10], battery byte [10] (when notification length ≥ 16)
 
 ---
 
