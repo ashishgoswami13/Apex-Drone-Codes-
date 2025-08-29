@@ -1,9 +1,16 @@
 # Override GitHub language detection
 *.py linguist-language=Python linguist-detectable=true
+drone_*.py linguist-language=Python linguist-detectable=true
+
+# Exclude HTML files from language statistics (mark as vendored)
+*.html linguist-vendored=true
+*.htm linguist-vendored=true
+
+# Mark documentation files
 *.md linguist-documentation=true
 README.md linguist-documentation=true
 
-# Mark any TeX files as documentation (if you have any)
+# Exclude TeX files from language statistics
 *.tex linguist-vendored=true
 *.cls linguist-vendored=true
 *.sty linguist-vendored=true
@@ -16,13 +23,8 @@ README.md linguist-documentation=true
 *.bbl linguist-vendored=true
 *.blg linguist-vendored=true
 
-# Force Python as the main language
+# Set line endings for Python files
 *.py text eol=lf
-drone_*.py linguist-language=Python linguist-detectable=true
 
-# If you have any HTML files that should count toward stats
-*.html linguist-language=HTML linguist-detectable=true
-
-# Override any files that might be misdetected
-# Add specific overrides here if needed
-# example: some_misdetected_file linguist-language=Python
+# If you have specific files that are misdetected, override them:
+# filename.extension linguist-language=Python
