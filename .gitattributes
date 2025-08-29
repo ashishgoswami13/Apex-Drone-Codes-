@@ -4,13 +4,21 @@
 README.md linguist-documentation
 
 # Mark any TeX files as documentation (if you have any)
-*.tex linguist-documentation
-*.cls linguist-documentation
-*.sty linguist-documentation
+*.tex linguist-vendored
+*.cls linguist-vendored
+*.sty linguist-vendored
+*.aux linguist-vendored
+*.log linguist-vendored
+*.fls linguist-vendored
+*.fdb_latexmk linguist-vendored
 
 # Force Python as the main language
 *.py text eol=lf
 drone_*.py linguist-language=Python
 
-# If you have any non-standard Python files, specify them:
-# some_file linguist-language=Python
+# If you have any HTML files that should count toward stats
+*.html linguist-language=HTML
+
+# Override any files that might be misdetected
+# Add specific overrides here if needed
+# example: some_misdetected_file linguist-language=Python
